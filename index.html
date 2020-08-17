@@ -3,10 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/b95f65a3b9.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="style.css" />
     <title>Tac's Weather App</title>
   </head>
   <body>
+    <div class="container">
+      <div class="top">
+        <h1 class="header">Tac's Weather App</h1>
+        <input class="text" type="text" placeholder="Enter city.." />
+        <button type="submit">SUBMIT</button>
+        <div class="location">
+          <small>Or click here for your location..</small>
+          <a href="#" id="loc" class="fas fa-map-marker-alt"></a>
+        </div>
+      </div>
+      <div class="results">
+        <!-- Weather Results -->
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

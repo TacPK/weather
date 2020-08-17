@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+:root {
+  --color: rgba(3, 177, 252, 0.5);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Acme', sans-serif;
+  background-color: var(--color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  margin: 1rem;
+  padding: 0;
+}
+
+h1 {
+  box-shadow: black;
+}
+
+.text {
+  background-color: var(--color);
+  color: #000;
+}
+
+button {
+  cursor: pointer;
+  background-color: var(--color);
+  margin-left: 3px;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 20px;
+}
+
+small {
+  margin-top: 5px;
+  margin-right: 15px;
+}
+
+#loc {
+  margin: 2px;
+  padding: 5px;
+  border: 1px solid #000;
+  border-radius: 20px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
