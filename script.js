@@ -1,9 +1,16 @@
-function weather(zipCode) {
-  var key = 'cb76f3e75adae5a47fdb83709b5d4ad3';
+// Event Listener
+const form = document.getElementById('form');
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+  fetchWeather();
+});
 
+// Fetch API Data
+function fetchWeather() {
+  var key = 'cb76f3e75adae5a47fdb83709b5d4ad3';
   fetch(
     'https://api.openweathermap.org/data/2.5/weather?zip=' +
-      zipCode +
+      zip.value +
       '&appid=' +
       key
   )
@@ -11,11 +18,22 @@ function weather(zipCode) {
       return resp.json();
     })
     .then((data) => {
-      console.log(data.weather[0].main);
+      domWeather(data);
     })
     .catch((err) => {
       console.log(err);
     });
 }
 
-// document.getElementsByClassName('weather').innerHTML = data.weather[0].main;
+// DOM Manipulation (put under .then(data) in Fetch)
+function domWeather(data) {
+  var fahrenheit = Math.round((parseFloat(data.main.temp) - 273.15) * 1.8 + 32);
+  var iconCode = data.weather[0].icon;
+  var iconURL = 'http://openweathermap.org/img/w/';
+
+  document.getElementById('city').innerHTML = data.name;
+  document.getElementById('country').innerHTML = data.sys.country;
+  document.getElementById('weather').innerHTML = data.weather[0].main;
+  document.getElementById('icon').src = iconURL + iconCode + '.png';
+  document.getElementById('temperature').innerHTML = fahrenheit + '°F';
+}

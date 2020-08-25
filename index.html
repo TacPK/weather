@@ -14,19 +14,21 @@
     <div class="container">
       <div class="top">
         <h1 class="header">Weather App</h1>
-        <input class="text" type="text" placeholder="Enter city.." />
-        <button type="submit">SUBMIT</button>
+        <form id="form">
+        <input class="text" id="zip" type="text" placeholder="Enter zip code.." />
+        <button id="btn" type="submit">SUBMIT</button>
+        </form>
         <div class="location">
           <small>Or click here for your location..</small>
           <a href="#" id="loc" class="fas fa-map-marker-alt"></a>
         </div>
       </div>
-      <div class="results">
-        <div class="city"></div>
-        <div class="state"></div>
-        <div class="weather"></div>
-        <div class="icon"></div>
-        <div class="temperature"></div>
+      <div id="results">
+        <div id="city"></div>
+        <div id="country"></div>
+        <div id="weather"></div>
+        <img id="icon" src=""></img>
+        <div id="temperature"></div>
       </div>
     </div>
     <script src="script.js"></script>
