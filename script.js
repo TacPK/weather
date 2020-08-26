@@ -1,3 +1,6 @@
+// Import APIs
+import { weatherKey } from './api.js';
+
 // Event Listener
 const form = document.getElementById('form');
 form.addEventListener('submit', function (e) {
@@ -7,12 +10,11 @@ form.addEventListener('submit', function (e) {
 
 // Fetch API Data
 function fetchWeather() {
-  var key = 'cb76f3e75adae5a47fdb83709b5d4ad3';
   fetch(
     'https://api.openweathermap.org/data/2.5/weather?zip=' +
       zip.value +
       '&appid=' +
-      key
+      weatherKey
   )
     .then((resp) => {
       return resp.json();
