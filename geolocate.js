@@ -4,10 +4,7 @@ import { geoKey } from './api.js';
 // Geolocation Button
 const geo = document.getElementById('loc');
 
-geo.addEventListener('click', function (e) {
-  fetchGeo();
-});
-
+// Get Coordinates
 function watchID() {
   navigator.geolocation.watchPosition((position) => {
     let longitude = position.coords.longitude;
@@ -17,6 +14,12 @@ function watchID() {
   });
 }
 
+// Event Listener for Geolocation Button
+geo.addEventListener('click', function (e) {
+  fetchGeo();
+});
+
+// Get Zip Code
 function fetchGeo() {
   watchID();
   let coordsLocal = localStorage.getItem('coords');

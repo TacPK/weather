@@ -1,6 +1,3 @@
 # weather
 
-Features to Add:
-
-- Location button
-- Weather cards
+A simple weather application featuring a geolocation button.

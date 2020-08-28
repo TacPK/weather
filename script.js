@@ -27,7 +27,7 @@ function fetchWeather() {
     });
 }
 
-// DOM Manipulation (put under .then(data) in Fetch)
+// DOM Manipulation
 function domWeather(data) {
   var fahrenheit = Math.round((parseFloat(data.main.temp) - 273.15) * 1.8 + 32);
   var iconCode = data.weather[0].icon;
