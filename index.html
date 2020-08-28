@@ -1,37 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <script
-      src="https://kit.fontawesome.com/b95f65a3b9.js"
-      crossorigin="anonymous"
+      src='https://kit.fontawesome.com/b95f65a3b9.js'
+      crossorigin='anonymous'
     ></script>
-    <link rel="stylesheet" href="style.css" />
+    <link rel='stylesheet' href='style.css' />
     <title>Tac's Weather App</title>
   </head>
   <body>
-    <div class="container">
-      <div class="top">
-        <h1 class="header">Weather App</h1>
-        <form id="form">
-        <input class="text" id="zip" type="text" placeholder="Enter zip code.." />
-        <button id="btn" type="submit">SUBMIT</button>
+    <div class='container'>
+      <div class='top'>
+        <h1 class='header'>Weather App</h1>
+        <form id='form'>
+        <input class='text' id='zip' type='text' placeholder='Enter zip code..' />
+        <button id='btn' type='submit'>SUBMIT</button>
         </form>
-        <div class="location">
+        <div class='location'>
           <small>Or click here for your location..</small>
-          <a href="#" id="loc" class="fas fa-map-marker-alt"></a>
+          <a href='#' id='loc' class='fas fa-map-marker-alt'></a>
         </div>
       </div>
-      <div id="results">
-        <div id="city"></div>
-        <div id="country"></div>
-        <div id="weather"></div>
-        <img id="icon" src=""></img>
-        <div id="temperature"></div>
+      <div id='results'>
+        <div id='city'></div>
+        <div id='country'></div>
+        <div id='weather'></div>
+        <img id='icon' src=''></img>
+        <div id='temperature'></div>
       </div>
     </div>
-    <script type="module" src="script.js" ></script>
-    <script type="module" src="api.js"></script>
+    <script type='module' src='script.js' ></script>
+    <script type='module' src='geolocate.js'></script>
+    <script type='module' src='api.js'></script>
   </body>
 </html>

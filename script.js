@@ -8,7 +8,7 @@ form.addEventListener('submit', function (e) {
   fetchWeather();
 });
 
-// Fetch API Data
+// Fetch Weather API Data
 function fetchWeather() {
   fetch(
     'https://api.openweathermap.org/data/2.5/weather?zip=' +
