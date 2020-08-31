@@ -38,6 +38,8 @@ function domWeather(data) {
   document.getElementById('weather').innerHTML = data.weather[0].main;
   document.getElementById('icon').src = iconURL + iconCode + '.png';
   document.getElementById('temperature').innerHTML = fahrenheit + '°F';
+
+  document.getElementById('results').style.visibility = 'visible';
 }
 
 // Geolocation Button
