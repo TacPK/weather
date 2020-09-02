@@ -39,7 +39,7 @@ function domWeather(data) {
   document.getElementById('icon').src = iconURL + iconCode + '.png';
   document.getElementById('temperature').innerHTML = fahrenheit + '°F';
 
-  document.getElementById('results').style.visibility = 'visible';
+  document.getElementById('results').style.display = 'flex';
 }
 
 // Geolocation Button

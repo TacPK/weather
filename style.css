@@ -51,7 +51,7 @@ button {
   align-items: center;
   justify-content: center;
   position: relative;
-  margin-top: 20px;
+  margin-top: 5px;
 }
 
 small {
@@ -71,10 +71,36 @@ a {
   text-decoration: none;
 }
 
-/* Cards */
-#results {
-  visibility: hidden;
+/* Tooltip */
+.tooltip {
+  display: inline-block;
+  position: relative;
+  border: solid 1px #000;
+  background: var(--color);
+  border-radius: 20px;
+  padding: 5px;
+  margin-right: 5px;
+}
+
+.tooltip .tooltext {
+  display: none;
+  width: 250px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  text-align: center;
+  border-radius: 20px;
+  background-color: #555;
+  color: #fff;
+}
+
+.tooltip:hover .tooltext {
   display: flex;
+}
+
+/* Card */
+#results {
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;

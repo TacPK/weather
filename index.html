@@ -8,13 +8,17 @@
       crossorigin='anonymous'
     ></script>
     <link rel='stylesheet' href='style.css' />
-    <title>Tac's Weather App</title>
+    <title>Postal Code Weather</title>
   </head>
   <body>
     <div class='container'>
       <div class='top'>
-        <h1 class='header'>Weather App</h1>
+        <h1 class='header'>Postal Code Weather</h1>
         <form id='form'>
+          <div class="tooltip">?
+            <span class="tooltext">Outside the US? Please enter the first part of your zip code and 2-letter country code
+              -- ex. EC1A,GB for London or 10115,DE for Berlin.</span>
+          </div>
         <input class='text' id='zip' type='text' placeholder='Enter zip code..' />
         <button id='btn' type='submit'>SUBMIT</button>
         </form>
