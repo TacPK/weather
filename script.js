@@ -1,10 +1,18 @@
 // Import APIs
 import { weatherKey, geoKey } from './api.js';
 
+// Force All Caps and Remove Spaces in Form Field
+function allCapsNoSpaces() {
+  let string = zip.value;
+  let newString = string.toUpperCase().replace(/\s+/g, '');
+  zip.value = newString;
+}
+
 // Event Listener
 const form = document.getElementById('form');
 form.addEventListener('submit', function (e) {
   e.preventDefault();
+  allCapsNoSpaces();
   fetchWeather();
 });
 

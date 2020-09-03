@@ -11,4 +11,5 @@ Outside the US requires a zip code and 2-letter country code (no spaces)
 
 - HTML/CSS
 - JavaScript
+- DOM Manupulation
 - API Consumption
