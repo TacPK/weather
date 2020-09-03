@@ -1,5 +1,5 @@
 // Import APIs
-import { weatherKey, geoKey } from './api.js';
+import { weatherKey, geoKey } from './apis.js';
 
 // Force All Caps and Remove Spaces in Form Field
 function allCapsNoSpaces() {
@@ -31,7 +31,7 @@ function fetchWeather() {
       domWeather(data);
     })
     .catch((err) => {
-      console.log(err);
+      alert('Please enter a valid zip code!');
     });
 }
 
@@ -86,6 +86,6 @@ function fetchGeo() {
       fetchWeather();
     })
     .catch((err) => {
-      console.log(err);
+      alert('Cannot find coordinates. Sorry!');
     });
 }
