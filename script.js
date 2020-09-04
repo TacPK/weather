@@ -28,8 +28,7 @@ function fetchWeather() {
       return resp.json();
     })
     .then((data) => {
-      fetchState();
-      setTimeout(domWeather(data), 10000); //Make fetchState and domWeather results appear at same time
+      domWeather(data);
     })
     .catch((err) => {
       alert('Please enter a valid zip code!');
@@ -43,6 +42,7 @@ function domWeather(data) {
   var iconURL = 'http://openweathermap.org/img/w/';
 
   document.getElementById('city').innerHTML = data.name;
+  fetchState();
   document.getElementById('country').innerHTML = data.sys.country;
   document.getElementById('weather').innerHTML = data.weather[0].main;
   document.getElementById('icon').src = iconURL + iconCode + '.png';
@@ -103,10 +103,12 @@ function fetchState() {
       return resp.json();
     })
     .then((data) => {
-      state.value = data.results[0].address_components[3].short_name;
-      document.getElementById('state').innerHTML = state.value;
+      domState(data);
     });
 }
 
-//
-//
+// Added domState
+function domState(data) {
+  state.value = data.results[0].address_components[3].short_name;
+  document.getElementById('state').innerHTML = state.value;
+}
