@@ -28,7 +28,8 @@ function fetchWeather() {
       return resp.json();
     })
     .then((data) => {
-      domWeather(data);
+      fetchState();
+      setTimeout(domWeather(data), 10000); //Make fetchState and domWeather results appear at same time
     })
     .catch((err) => {
       alert('Please enter a valid zip code!');
@@ -89,3 +90,23 @@ function fetchGeo() {
       alert('Cannot find coordinates. Sorry!');
     });
 }
+
+// Get State
+function fetchState() {
+  fetch(
+    'https://maps.googleapis.com/maps/api/geocode/json?address=' +
+      zip.value +
+      '&key=' +
+      geoKey
+  )
+    .then((resp) => {
+      return resp.json();
+    })
+    .then((data) => {
+      state.value = data.results[0].address_components[3].short_name;
+      document.getElementById('state').innerHTML = state.value;
+    });
+}
+
+//
+//

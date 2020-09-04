@@ -128,6 +128,11 @@ a {
   font-size: 32px;
 }
 
+#state {
+  font-weight: bold;
+  font-size: 20px;
+}
+
 #icon {
   width: 60px;
   height: auto;
