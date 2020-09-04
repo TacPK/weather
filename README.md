@@ -14,5 +14,3 @@ Outside the US requires a zip code and 2-letter country code
 - JavaScript
 - DOM Manupulation
 - API Consumption
-
-* Need to fix the timing of results for fetchState();
